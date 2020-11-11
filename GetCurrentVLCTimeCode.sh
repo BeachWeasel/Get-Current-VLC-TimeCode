@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# replace the "vlc" in this line if you have a different password.
 vtc_seconds=$(curl -u :vlc http://localhost:8080/requests/status.xml | xmllint --xpath "//root/time/text()" -)
 
 if [ 0 -eq $? ]
